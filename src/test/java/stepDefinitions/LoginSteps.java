@@ -21,14 +21,14 @@ public class LoginSteps {
 		webdriver.manage().window().maximize();
 	}
 
-	@When("Enter username")
-	public void enterUsername() {
-		webdriver.findElement(By.id("username")).sendKeys("student");
+	@When("Enter username {string}")
+	public void enterUsername(String userName) {
+		webdriver.findElement(By.id("username")).sendKeys(userName);
 	}
 
-	@When("Enter password")
-	public void enterPassword() {
-		webdriver.findElement(By.name("password")).sendKeys("Password123");
+	@When("Enter password {string}")
+	public void enterPassword(String password) {
+		webdriver.findElement(By.name("password")).sendKeys(password);
 	}
 
 	@Then("Click on Login Button")
